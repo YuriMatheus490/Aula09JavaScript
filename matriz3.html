@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar todos os erros</title>
+</head>
+
+<body>
+    <form action="">
+        <h2>Matriz 4x3</h2>
+        <hr>
+        <button type="button" onclick="mostrar()">Mostrar matriz</button>
+    </form>
+    <div id="resposta"></div>
+</body>
+<script>
+    function mostrar() {
+        const matriz = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+            [10, 11, 12]
+        ];
+        let texto = " ";
+
+        for (let i = 0; i < 4; i++) {  //controla linha
+            texto += matriz[i].join("  ") + "\n";
+
+        
+        }
+        document.getElementById("resposta").innerHTML = texto;
+    }
+   
+</script>
+
+</html>
